@@ -1,0 +1,21 @@
+static int marsExploration(String s) {
+        // multiple = s.length()/3
+        // StringBuilder sb for loop SOS multiple times
+        // sb.toString()
+        // for loop. if s.charAt(i)not equal to sb then error++
+        int multiple = 0;
+        int error = 0;
+        StringBuilder sb = new StringBuilder();
+
+        multiple = s.length()/3;
+        for(int i=0;i<multiple;i++){
+            sb.append("SOS");
+        }
+      String result = sb.toString();
+        for(int j=0;j<s.length();j++){
+            if(s.charAt(j)!=result.charAt(j)){
+                error++;
+            }
+        }
+        return error; 
+    }
